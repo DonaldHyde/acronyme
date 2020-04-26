@@ -1,0 +1,187 @@
+body {
+  background: #ccc;
+  margin: 0;
+  margin-top: 48px;
+  font-family: Avenir, Arial, sans-serif;
+}
+a,
+span {
+  line-height: 48px;
+}
+#nav-bar {
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #303030;
+  color: #dedede;
+  padding: 0 48px;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+}
+#nav-bar a {
+  cursor: pointer;
+  color: #dedede;
+  text-decoration: none;
+}
+#nav-bar a:hover {
+  text-decoration: none;
+}
+#nav-bar .logo,
+#nav-bar .mobile {
+  display: none;
+}
+#nav-bar ul {
+  display: none;
+}
+#nav-bar.active .ellipsis {
+  visibility: hidden;
+}
+#nav-bar.active ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#nav-bar.active ul li {
+  margin-left: 2em;
+}
+#nav-bar.active .mobile {
+  display: inline;
+}
+#nav-bar >.nav-item>.method:before {
+  visibility: visible;
+}
+.logo,
+.nav-item {
+  cursor: pointer;
+}
+#nav-bar .menu-text:hover {
+  color: #0a7bff;
+}
+.logo:hover .method,
+.nav-item:hover .method {
+  color: #0a7bff;
+}
+.logo:hover .method:after,
+.nav-item:hover .method:after,
+.logo:hover .method:before,
+.nav-item:hover .method:before {
+  visibility: visible;
+}
+/* .method:after {
+  content: '()';
+  color: #dedede;
+  visibility: hidden;
+} */
+/* .method:before {
+  content: '.';
+  color: #dedede;
+  visibility: hidden;
+} */
+@media (min-width: 640px) {
+  #nav-bar .menu {
+    display: none;
+  }
+  #nav-bar .logo {
+    display: inline;
+  }
+  #nav-bar .logo .method:before {
+    content: '';
+  }
+  #nav-bar ul {
+    display: inline-block;
+    float: right;
+    margin: 0;
+  }
+  #nav-bar ul li {
+    display: inline-block;
+    margin-right: 2em;
+  }
+  #nav-bar.active .mobile {
+    display: none;
+  }
+}
+.page {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1000px;
+  /* font-family: courier, monospace; */
+  font-size: 24px;
+  line-height: 30px;
+  background: #fff;
+}
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+.word-count {
+  text-align: right;
+  margin-bottom: 128px;
+}
+h2, h3 {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+header {
+  position: relative;
+  background-image: url('./images/man-in-blue-top-giving-box-to-man-in-gray-top-696205.jpg');
+  /* height: 400px; */
+  background-size: cover;
+  color: #fff;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+header .scrim {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(0,0,0,0.3);
+}
+header h1 {
+  margin-bottom: 12px;
+  position: relative;
+}
+header h3 {
+  margin-top: 12px;
+  position: relative;
+}
+
+.logos {
+  text-align: center;
+}
+.logos ul {
+  list-style: none;
+  padding: 0;
+}
+.logos ul li {
+  display: inline;
+  margin: 20px 0;
+}
+.logos ul li img {
+  width: 100px;
+  height: 100px;
+}
+
+button {
+  text-align: center;
+  margin: 36px 0;
+  text-transform: uppercase;
+  line-height: 48px;
+  padding: 12px 36px;
+  background: #0a7bff;
+  color: #fff;
+  font-size: 24px;
+}
+footer {
+  padding-bottom: 150px;
+  display: block;
+  text-align: center;
+}
